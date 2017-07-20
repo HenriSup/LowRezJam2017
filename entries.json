@@ -1,0 +1,29 @@
+{
+  "nextEntryId": 4,
+  "nodes": [
+    {
+      "id": "0",
+      "name": "Scene",
+      "type": "scene"
+    },
+    {
+      "id": "1",
+      "name": "Sprites",
+      "type": null,
+      "children": [
+        {
+          "id": "2",
+          "name": "Backgrounds",
+          "type": null,
+          "children": [
+            {
+              "id": "3",
+              "name": "DebugBackground",
+              "type": "sprite"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
