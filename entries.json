@@ -1,10 +1,22 @@
 {
-  "nextEntryId": 4,
+  "nextEntryId": 10,
   "nodes": [
     {
       "id": "0",
       "name": "Scene",
       "type": "scene"
+    },
+    {
+      "id": "8",
+      "name": "Prefab",
+      "type": null,
+      "children": [
+        {
+          "id": "9",
+          "name": "Ship",
+          "type": "scene"
+        }
+      ]
     },
     {
       "id": "1",
@@ -22,6 +34,30 @@
               "type": "sprite"
             }
           ]
+        },
+        {
+          "id": "5",
+          "name": "PlaceHolders",
+          "type": null,
+          "children": [
+            {
+              "id": "4",
+              "name": "shipPlaceHolder",
+              "type": "sprite"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "name": "Behaviors",
+      "type": null,
+      "children": [
+        {
+          "id": "7",
+          "name": "shipBehavior",
+          "type": "script"
         }
       ]
     }

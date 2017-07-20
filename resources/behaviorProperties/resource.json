@@ -1,3 +1,10 @@
 {
-  "behaviors": {}
+  "behaviors": {
+    "ShipBehavior": {
+      "scriptId": "7",
+      "line": 0,
+      "parentBehavior": null,
+      "properties": []
+    }
+  }
 }
