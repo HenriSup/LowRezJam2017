@@ -91,14 +91,14 @@
       "prefab": null
     },
     {
-      "id": "3",
+      "id": "4",
       "name": "Préfab",
       "children": [],
       "components": [],
       "position": {
-        "x": -15,
+        "x": -14,
         "y": -25,
-        "z": 10
+        "z": 1
       },
       "orientation": {
         "x": 0,
