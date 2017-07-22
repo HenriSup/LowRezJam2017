@@ -4,7 +4,7 @@ class ShipBehavior extends Sup.Behavior {
   private cannonBody:CANNON.Body;
   private controleScheme;
   private maxSpeed=50;
-  private moveSpeed=50;
+  private moveSpeed=40;
   
   awake() {
     this.cannonBody = this.actor.cannonBody.body;
