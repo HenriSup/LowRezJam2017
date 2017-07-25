@@ -10,6 +10,17 @@
           "type": "number"
         }
       ]
+    },
+    "ShipBehavior2": {
+      "scriptId": "10",
+      "line": 0,
+      "parentBehavior": null,
+      "properties": [
+        {
+          "name": "playerNumber",
+          "type": "number"
+        }
+      ]
     }
   }
 }

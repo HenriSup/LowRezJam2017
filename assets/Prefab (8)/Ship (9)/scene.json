@@ -27,7 +27,7 @@
         {
           "type": "Behavior",
           "config": {
-            "behaviorName": "ShipBehavior",
+            "behaviorName": "ShipBehavior2",
             "propertyValues": {
               "playerNumber": {
                 "type": "number",
