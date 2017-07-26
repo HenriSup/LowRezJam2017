@@ -4,7 +4,7 @@ class ShipBehavior extends Sup.Behavior {
   private cannonBody:CANNON.Body;
   private controleScheme;
   private maxSpeed=50;
-  private moveSpeed=40;
+  private moveSpeed=50;
   
   awake() {
     this.cannonBody = this.actor.cannonBody.body;
@@ -27,11 +27,11 @@ class ShipBehavior extends Sup.Behavior {
     //13 = down
     //14 = left
     //15 = right
-    var upIsDown = Sup.Input.getGamepadButtonValue(this.playerNumber,12);
-    var downIsDown = Sup.Input.getGamepadButtonValue(this.playerNumber,13);
-    var leftIsDown = Sup.Input.getGamepadButtonValue(this.playerNumber,14);
-    var rightIsDown = Sup.Input.getGamepadButtonValue(this.playerNumber,15);
-    var multiplicator = 1;
+    var upIsDown = Sup.Input.getGamepadButtonValue(this.playerNumber,12) || Sup.Input.isKeyDown("Z");
+    var downIsDown = Sup.Input.getGamepadButtonValue(this.playerNumber,13) || Sup.Input.isKeyDown("S");
+    var leftIsDown = Sup.Input.getGamepadButtonValue(this.playerNumber,14) || Sup.Input.isKeyDown("Q");
+    var rightIsDown = Sup.Input.getGamepadButtonValue(this.playerNumber,15) || Sup.Input.isKeyDown("D");
+    var multiplicator = 0.707;
     var xPad=0;
     var yPad=0;
     
@@ -54,11 +54,11 @@ class ShipBehavior extends Sup.Behavior {
     if (xPad!=0 && yPad!=0){
       multiplicator=0.707;
     }
-    
-    Sup.log("xpad:"+ xPad)
+
     this.actor.cannonBody.body.velocity=new CANNON.Vec3(xPad*this.moveSpeed*multiplicator,yPad*this.moveSpeed*multiplicator,0);
     this.actor.cannonBody.body.position.x=Math.round(this.actor.cannonBody.body.position.x);
     this.actor.cannonBody.body.position.y=Math.round(this.actor.cannonBody.body.position.y);
+    
    
     
     

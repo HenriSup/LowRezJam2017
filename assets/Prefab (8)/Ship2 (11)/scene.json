@@ -27,7 +27,7 @@
         {
           "type": "Behavior",
           "config": {
-            "behaviorName": "ShipBehavior",
+            "behaviorName": "ShipBehavior2",
             "propertyValues": {
               "playerNumber": {
                 "type": "number",
@@ -36,36 +36,6 @@
             }
           },
           "id": "1"
-        },
-        {
-          "type": "CannonBody",
-          "config": {
-            "formatVersion": 2,
-            "mass": 3,
-            "fixedRotation": false,
-            "group": 1,
-            "mask": 1,
-            "shape": "box",
-            "positionOffset": {
-              "x": 0,
-              "y": 0,
-              "z": 0
-            },
-            "orientationOffset": {
-              "x": 0,
-              "y": 0,
-              "z": 0
-            },
-            "halfSize": {
-              "x": 2,
-              "y": 5,
-              "z": 0.5
-            },
-            "radius": 1,
-            "height": 1,
-            "segments": 16
-          },
-          "id": "3"
         }
       ],
       "position": {

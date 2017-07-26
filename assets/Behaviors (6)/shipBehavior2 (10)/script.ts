@@ -1,7 +1,7 @@
 class ShipBehavior2 extends Sup.Behavior {
   
   public playerNumber=0;
-  private cannonBody:CANNON.Body;
+  //private cannonBody:CANNON.Body;
   private controleScheme;
   private maxSpeed=50;
   private moveSpeed=40;
@@ -20,7 +20,7 @@ class ShipBehavior2 extends Sup.Behavior {
   private maxBufferD;
   
   awake() {
-    this.cannonBody = this.actor.cannonBody.body;
+    //this.cannonBody = this.actor.cannonBody.body;
     this.rightBuffer=0;
     this.upRightBuffer=0;
     this.upBuffer=0;
@@ -29,8 +29,9 @@ class ShipBehavior2 extends Sup.Behavior {
     this.downLeftBuffer=0;
     this.downBuffer=0;
     this.downRightBuffer=0;
-    this.maxBufferVH = 70;
-    this.maxBufferD = 100;
+    this.maxBufferVH = 7;
+    this.maxBufferD = 10;
+    this.bufferIncrement = 7;
   }
 
   update() {
@@ -50,10 +51,10 @@ class ShipBehavior2 extends Sup.Behavior {
     //13 = down
     //14 = left
     //15 = right
-    var upIsDown = Sup.Input.getGamepadButtonValue(this.playerNumber,12);
-    var downIsDown = Sup.Input.getGamepadButtonValue(this.playerNumber,13);
-    var leftIsDown = Sup.Input.getGamepadButtonValue(this.playerNumber,14);
-    var rightIsDown = Sup.Input.getGamepadButtonValue(this.playerNumber,15);
+    var upIsDown = Sup.Input.getGamepadButtonValue(this.playerNumber,12) || Sup.Input.isKeyDown("Z");
+    var downIsDown = Sup.Input.getGamepadButtonValue(this.playerNumber,13) || Sup.Input.isKeyDown("S");
+    var leftIsDown = Sup.Input.getGamepadButtonValue(this.playerNumber,14) || Sup.Input.isKeyDown("Q");
+    var rightIsDown = Sup.Input.getGamepadButtonValue(this.playerNumber,15) || Sup.Input.isKeyDown("D");
     var multiplicator = 1;
     var xPad=0;
     var yPad=0;
@@ -118,6 +119,7 @@ class ShipBehavior2 extends Sup.Behavior {
             this.move(1,0)
             this.rightBuffer = 0;
           }
+          Sup.log(this.rightBuffer);
         break; 
         case "upRight":
           buffer=this.upRightBuffer;
@@ -204,8 +206,10 @@ class ShipBehavior2 extends Sup.Behavior {
     }
   
     move(x,y){
-      var actualPosition:Sup.Math.Vector3= this.actor.getPosition();
-      this.actor.setPosition(actualPosition.x+x,actualPosition.y+y,actualPosition.z)
+      var actualPosition:Sup.Math.Vector3=this.actor.getPosition();
+      this.actor.move(x,y,0);
+      Sup.log("move bitch");
+      Sup.log(actualPosition);
     }
 }
   
