@@ -110,99 +110,83 @@ class ShipBehavior2 extends Sup.Behavior {
       var buffer
       switch (value){
         case "right":
-          if(this.rightBuffer != 0){
-            buffer=this.rightBuffer;
-            this.resetBuffers()
-            this.rightBuffer=buffer;
-            this.rightBuffer+=this.bufferIncrement;
-            if(this.rightBuffer>=this.maxBufferVH){
-              this.move(1,0)
-              this.rightBuffer = 0;
-            }
+          buffer=this.rightBuffer;
+          this.resetBuffers()
+          this.rightBuffer=buffer;
+          this.rightBuffer+=this.bufferIncrement;
+          if(this.rightBuffer>=this.maxBufferVH){
+            this.move(1,0)
+            this.rightBuffer = 0;
           }
         break; 
         case "upRight":
-          if(this.upRightBuffer != 0){
-            buffer=this.upRightBuffer;
-            this.resetBuffers()
-            this.upRightBuffer=buffer;
-            this.upRightBuffer+=this.bufferIncrement;
-            if(this.upRightBuffer>=this.maxBufferD){
-              this.move(1,1)
-              this.upRightBuffer = 0;
-            }
+          buffer=this.upRightBuffer;
+          this.resetBuffers()
+          this.upRightBuffer=buffer;
+          this.upRightBuffer+=this.bufferIncrement;
+          if(this.upRightBuffer>=this.maxBufferD){
+            this.move(1,1)
+            this.upRightBuffer = 0;
           }
         break; 
         case "up":
-          if(this.upBuffer != 0){
-            buffer=this.upBuffer;
-            this.resetBuffers()
-            this.upBuffer=buffer;
-            this.upBuffer+=this.bufferIncrement;
-            if(this.upBuffer>=this.maxBufferVH){
-              this.move(0,1)
-              this.upBuffer = 0;
-            }
+          buffer=this.upBuffer;
+          this.resetBuffers()
+          this.upBuffer=buffer;
+          this.upBuffer+=this.bufferIncrement;
+          if(this.upBuffer>=this.maxBufferVH){
+            this.move(0,1)
+            this.upBuffer = 0;
           }
         break; 
         case "upLeft":
-          if(this.upLeftBuffer != 0){
-            buffer=this.upLeftBuffer;
-            this.resetBuffers()
-            this.upLeftBuffer=buffer;
-            this.upLeftBuffer+=this.bufferIncrement;
-            if(this.upLeftBuffer>=this.maxBufferD){
-              this.move(-1,1)
-              this.upLeftBuffer = 0;
-            }
+          buffer=this.upLeftBuffer;
+          this.resetBuffers()
+          this.upLeftBuffer=buffer;
+          this.upLeftBuffer+=this.bufferIncrement;
+          if(this.upLeftBuffer>=this.maxBufferD){
+            this.move(-1,1)
+            this.upLeftBuffer = 0;
           }
         break; 
         case "left":
-          if(this.leftBuffer != 0){
-            buffer=this.leftBuffer;
-            this.resetBuffers()
-            this.leftBuffer=buffer;
-            this.leftBuffer+=this.bufferIncrement;
-            if(this.leftBuffer>=this.maxBufferVH){
-              this.move(-1,0)
-              this.leftBuffer = 0;
-            }
+          buffer=this.leftBuffer;
+          this.resetBuffers()
+          this.leftBuffer=buffer;
+          this.leftBuffer+=this.bufferIncrement;
+          if(this.leftBuffer>=this.maxBufferVH){
+            this.move(-1,0)
+            this.leftBuffer = 0;
           }
         break; 
         case "downLeft":
-          if(this.downLeftBuffer != 0){
-            buffer=this.downLeftBuffer;
-            this.resetBuffers()
-            this.downLeftBuffer=buffer;
-            this.downLeftBuffer+=this.bufferIncrement;
-            if(this.downLeftBuffer>=this.maxBufferD){
-              this.move(-1,-1)
-              this.downLeftBuffer = 0;
-            }  
-          }
+          buffer=this.downLeftBuffer;
+          this.resetBuffers()
+          this.downLeftBuffer=buffer;
+          this.downLeftBuffer+=this.bufferIncrement;
+          if(this.downLeftBuffer>=this.maxBufferD){
+            this.move(-1,-1)
+            this.downLeftBuffer = 0;
+          }  
         break; 
         case "down":
-          if(this.downBuffer != 0){
-            buffer=this.downBuffer;
-            this.resetBuffers()
-            this.downBuffer=buffer;
-            this.downBuffer+=this.bufferIncrement;
-            if(this.downBuffer>=this.maxBufferVH){
-              this.move(0,-1)
-              this.downBuffer = 0;
-            }
+          buffer=this.downBuffer;
+          this.resetBuffers()
+          this.downBuffer=buffer;
+          this.downBuffer+=this.bufferIncrement;
+          if(this.downBuffer>=this.maxBufferVH){
+            this.move(0,-1)
+            this.downBuffer = 0;
           }
         break; 
         case "downRight":
-          if(this.downRightBuffer != 0){
-            buffer=this.downRightBuffer;
-            this.resetBuffers()
-            this.downRightBuffer=buffer;
-            this.downRightBuffer+=this.bufferIncrement;
-            if(this.downRightBuffer>=this.maxBufferD){
-              this.move(1,-1)
-              this.downRightBuffer = 0;
-            }
+          buffer=this.downRightBuffer;
+          this.resetBuffers()
+          this.downRightBuffer=buffer;
+          this.downRightBuffer+=this.bufferIncrement;
+          if(this.downRightBuffer>=this.maxBufferD){
+            this.move(1,-1)
+            this.downRightBuffer = 0;
           }
         break;
       }
@@ -223,7 +207,6 @@ class ShipBehavior2 extends Sup.Behavior {
       var actualPosition:Sup.Math.Vector3= this.actor.getPosition();
       this.actor.setPosition(actualPosition.x+x,actualPosition.y+y,actualPosition.z)
     }
-    
 }
   
  
