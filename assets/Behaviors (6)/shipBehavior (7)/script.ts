@@ -5,9 +5,11 @@ class ShipBehavior extends Sup.Behavior {
   private controleScheme;
   private maxSpeed=50;
   private moveSpeed=50;
+  private moveBuffer:Sup.Math.Vector2;
   
   awake() {
     this.cannonBody = this.actor.cannonBody.body;
+    this.moveBuffer = new Sup.Math.Vector2(0,0);
   }
 
   update() {
@@ -54,11 +56,19 @@ class ShipBehavior extends Sup.Behavior {
     if (xPad!=0 && yPad!=0){
       multiplicator=0.707;
     }
+    
+    
+    
+    this.actor.cannonBody.body.velocity=new CANNON.Vec3((xPad*this.moveSpeed*multiplicator),(yPad*this.moveSpeed*multiplicator),0);
+    Sup.log("vertical ="+this.actor.cannonBody.body.velocity);
 
-    this.actor.cannonBody.body.velocity=new CANNON.Vec3(xPad*this.moveSpeed*multiplicator,yPad*this.moveSpeed*multiplicator,0);
+
+    this.moveBuffer = new Sup.Math.Vector2(this.actor.cannonBody.body.position.x%1,this.actor.cannonBody.body.position.y%1)
+
+
     this.actor.cannonBody.body.position.x=Math.round(this.actor.cannonBody.body.position.x);
     this.actor.cannonBody.body.position.y=Math.round(this.actor.cannonBody.body.position.y);
-    
+
    
     
     
