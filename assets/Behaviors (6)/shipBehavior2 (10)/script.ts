@@ -31,7 +31,7 @@ class ShipBehavior2 extends Sup.Behavior {
     this.downRightBuffer=0;
     this.maxBufferVH = 7;
     this.maxBufferD = 10;
-    this.bufferIncrement = 7;
+    this.bufferIncrement = 10;
   }
 
   update() {

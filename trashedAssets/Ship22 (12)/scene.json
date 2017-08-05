@@ -42,7 +42,7 @@
           "config": {
             "formatVersion": 2,
             "mass": 3,
-            "fixedRotation": true,
+            "fixedRotation": false,
             "group": 1,
             "mask": 1,
             "shape": "box",
@@ -57,7 +57,7 @@
               "z": 0
             },
             "halfSize": {
-              "x": 3,
+              "x": 2,
               "y": 3,
               "z": 0.5
             },

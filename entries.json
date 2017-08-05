@@ -1,5 +1,5 @@
 {
-  "nextEntryId": 12,
+  "nextEntryId": 16,
   "nodes": [
     {
       "id": "0",
@@ -17,7 +17,7 @@
           "type": "scene"
         },
         {
-          "id": "11",
+          "id": "15",
           "name": "Ship2",
           "type": "scene"
         }
@@ -47,7 +47,12 @@
           "children": [
             {
               "id": "4",
-              "name": "shipPlaceHolder",
+              "name": "Blu",
+              "type": "sprite"
+            },
+            {
+              "id": "14",
+              "name": "Red",
               "type": "sprite"
             }
           ]

@@ -10,7 +10,7 @@
           "type": "SpriteRenderer",
           "config": {
             "formatVersion": 1,
-            "spriteAssetId": "4",
+            "spriteAssetId": "14",
             "animationId": null,
             "horizontalFlip": false,
             "verticalFlip": false,
@@ -31,7 +31,7 @@
             "propertyValues": {
               "playerNumber": {
                 "type": "number",
-                "value": 0
+                "value": 1
               }
             }
           },
@@ -57,7 +57,7 @@
               "z": 0
             },
             "halfSize": {
-              "x": 3,
+              "x": 2,
               "y": 3,
               "z": 0.5
             },

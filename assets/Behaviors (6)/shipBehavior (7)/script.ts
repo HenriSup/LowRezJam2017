@@ -29,10 +29,18 @@ class ShipBehavior extends Sup.Behavior {
     //13 = down
     //14 = left
     //15 = right
-    var upIsDown = Sup.Input.getGamepadButtonValue(this.playerNumber,12) || Sup.Input.isKeyDown("Z");
-    var downIsDown = Sup.Input.getGamepadButtonValue(this.playerNumber,13) || Sup.Input.isKeyDown("S");
-    var leftIsDown = Sup.Input.getGamepadButtonValue(this.playerNumber,14) || Sup.Input.isKeyDown("Q");
-    var rightIsDown = Sup.Input.getGamepadButtonValue(this.playerNumber,15) || Sup.Input.isKeyDown("D");
+    if (this.playerNumber == 0){
+      this.controleScheme = {left:'Q',right:'D',up:'Z',down:'S',punch:'V',jump:'B',dash:'N',
+                             left2:'A',right2:'D',up2:'W',down2:'S',punch2:'V',jump2:'B',dash2:'N'};
+    } 
+    if (this.playerNumber == 1){
+      this.controleScheme = {left:'LEFT',right:'RIGHT',up:'UP',down:'DOWN',punch:'I',jump:'O',dash:'P',
+                             left2:'LEFT',right2:'RIGHT',up2:'UP',down2:'DOWN',punch2:'NUMPAD1',jump2:'NUMPAD2',dash2:'NUMPAD3'};
+    }
+    var upIsDown = Sup.Input.getGamepadButtonValue(this.playerNumber,12) || Sup.Input.isKeyDown(this.controleScheme.up);
+    var downIsDown = Sup.Input.getGamepadButtonValue(this.playerNumber,13) || Sup.Input.isKeyDown(this.controleScheme.down);
+    var leftIsDown = Sup.Input.getGamepadButtonValue(this.playerNumber,14) || Sup.Input.isKeyDown(this.controleScheme.left);
+    var rightIsDown = Sup.Input.getGamepadButtonValue(this.playerNumber,15) || Sup.Input.isKeyDown(this.controleScheme.right);
     var multiplicator = 0.707;
     var xPad=0;
     var yPad=0;
@@ -60,15 +68,14 @@ class ShipBehavior extends Sup.Behavior {
     
     
     this.actor.cannonBody.body.velocity=new CANNON.Vec3((xPad*this.moveSpeed*multiplicator),(yPad*this.moveSpeed*multiplicator),0);
-    Sup.log("vertical ="+this.actor.cannonBody.body.velocity);
-
-
+    Sup.log(Sup.Cannon.setWorldAutoUpdate(true));
+    
     this.moveBuffer = new Sup.Math.Vector2(this.actor.cannonBody.body.position.x%1,this.actor.cannonBody.body.position.y%1)
 
 
     this.actor.cannonBody.body.position.x=Math.round(this.actor.cannonBody.body.position.x);
     this.actor.cannonBody.body.position.y=Math.round(this.actor.cannonBody.body.position.y);
-
+    
    
     
     
