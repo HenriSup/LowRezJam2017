@@ -21,6 +21,17 @@
           "type": "number"
         }
       ]
+    },
+    "BotBehavior": {
+      "scriptId": "22",
+      "line": 0,
+      "parentBehavior": null,
+      "properties": [
+        {
+          "name": "playerNumber",
+          "type": "number"
+        }
+      ]
     }
   }
 }

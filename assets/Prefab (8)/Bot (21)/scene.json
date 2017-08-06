@@ -1,0 +1,262 @@
+{
+  "formatVersion": 1,
+  "nodes": [
+    {
+      "id": "0",
+      "name": "Bot",
+      "children": [
+        {
+          "id": "3",
+          "name": "Hands",
+          "children": [
+            {
+              "id": "1",
+              "name": "LeftHand",
+              "children": [],
+              "components": [
+                {
+                  "type": "SpriteRenderer",
+                  "config": {
+                    "formatVersion": 1,
+                    "spriteAssetId": "19",
+                    "animationId": null,
+                    "horizontalFlip": false,
+                    "verticalFlip": false,
+                    "castShadow": false,
+                    "receiveShadow": false,
+                    "color": "ffffff",
+                    "overrideOpacity": false,
+                    "opacity": null,
+                    "materialType": "basic",
+                    "shaderAssetId": null
+                  },
+                  "id": "0"
+                },
+                {
+                  "type": "CannonBody",
+                  "config": {
+                    "formatVersion": 2,
+                    "mass": 0,
+                    "fixedRotation": false,
+                    "group": 1,
+                    "mask": 1,
+                    "shape": "box",
+                    "positionOffset": {
+                      "x": 0,
+                      "y": -1,
+                      "z": 0
+                    },
+                    "orientationOffset": {
+                      "x": 0,
+                      "y": 0,
+                      "z": 0
+                    },
+                    "halfSize": {
+                      "x": 4,
+                      "y": 5,
+                      "z": 0.5
+                    },
+                    "radius": 1,
+                    "height": 1,
+                    "segments": 16
+                  },
+                  "id": "1"
+                }
+              ],
+              "position": {
+                "x": -15,
+                "y": 0,
+                "z": 0
+              },
+              "orientation": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              },
+              "visible": true,
+              "layer": 0,
+              "prefab": null
+            },
+            {
+              "id": "2",
+              "name": "RightHand",
+              "children": [],
+              "components": [
+                {
+                  "type": "SpriteRenderer",
+                  "config": {
+                    "formatVersion": 1,
+                    "spriteAssetId": "20",
+                    "animationId": null,
+                    "horizontalFlip": false,
+                    "verticalFlip": false,
+                    "castShadow": false,
+                    "receiveShadow": false,
+                    "color": "ffffff",
+                    "overrideOpacity": false,
+                    "opacity": null,
+                    "materialType": "basic",
+                    "shaderAssetId": null
+                  },
+                  "id": "0"
+                },
+                {
+                  "type": "CannonBody",
+                  "config": {
+                    "formatVersion": 2,
+                    "mass": 0,
+                    "fixedRotation": false,
+                    "group": 1,
+                    "mask": 1,
+                    "shape": "box",
+                    "positionOffset": {
+                      "x": 0,
+                      "y": -1,
+                      "z": 0
+                    },
+                    "orientationOffset": {
+                      "x": 0,
+                      "y": 0,
+                      "z": 0
+                    },
+                    "halfSize": {
+                      "x": 4,
+                      "y": 5,
+                      "z": 0.5
+                    },
+                    "radius": 1,
+                    "height": 1,
+                    "segments": 16
+                  },
+                  "id": "1"
+                }
+              ],
+              "position": {
+                "x": 15,
+                "y": 0,
+                "z": 0
+              },
+              "orientation": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              },
+              "visible": true,
+              "layer": 0,
+              "prefab": null
+            }
+          ],
+          "components": [],
+          "position": {
+            "x": 0,
+            "y": 12,
+            "z": -1
+          },
+          "orientation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "visible": true,
+          "layer": 0,
+          "prefab": null
+        }
+      ],
+      "components": [
+        {
+          "type": "CannonBody",
+          "config": {
+            "formatVersion": 2,
+            "mass": 0,
+            "fixedRotation": false,
+            "group": 1,
+            "mask": 1,
+            "shape": "box",
+            "positionOffset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "orientationOffset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "halfSize": {
+              "x": 5,
+              "y": 12,
+              "z": 0.5
+            },
+            "radius": 1,
+            "height": 1,
+            "segments": 16
+          },
+          "id": "0"
+        },
+        {
+          "type": "SpriteRenderer",
+          "config": {
+            "formatVersion": 1,
+            "spriteAssetId": "18",
+            "animationId": null,
+            "horizontalFlip": false,
+            "verticalFlip": false,
+            "castShadow": false,
+            "receiveShadow": false,
+            "color": "ffffff",
+            "overrideOpacity": false,
+            "opacity": null,
+            "materialType": "basic",
+            "shaderAssetId": null
+          },
+          "id": "1"
+        },
+        {
+          "type": "Behavior",
+          "config": {
+            "behaviorName": "BotBehavior",
+            "propertyValues": {}
+          },
+          "id": "2"
+        }
+      ],
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "orientation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "visible": true,
+      "layer": 0,
+      "prefab": null
+    }
+  ]
+}

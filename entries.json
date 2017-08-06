@@ -1,5 +1,5 @@
 {
-  "nextEntryId": 16,
+  "nextEntryId": 23,
   "nodes": [
     {
       "id": "0",
@@ -20,6 +20,11 @@
           "id": "15",
           "name": "Ship2",
           "type": "scene"
+        },
+        {
+          "id": "21",
+          "name": "Bot",
+          "type": "scene"
         }
       ]
     },
@@ -28,6 +33,23 @@
       "name": "Sprites",
       "type": null,
       "children": [
+        {
+          "id": "16",
+          "name": "Ship",
+          "type": null,
+          "children": [
+            {
+              "id": "4",
+              "name": "Blu",
+              "type": "sprite"
+            },
+            {
+              "id": "14",
+              "name": "Red",
+              "type": "sprite"
+            }
+          ]
+        },
         {
           "id": "2",
           "name": "Backgrounds",
@@ -44,15 +66,26 @@
           "id": "5",
           "name": "PlaceHolders",
           "type": null,
+          "children": []
+        },
+        {
+          "id": "17",
+          "name": "Bot",
+          "type": null,
           "children": [
             {
-              "id": "4",
-              "name": "Blu",
+              "id": "18",
+              "name": "Body",
               "type": "sprite"
             },
             {
-              "id": "14",
-              "name": "Red",
+              "id": "19",
+              "name": "LeftHand",
+              "type": "sprite"
+            },
+            {
+              "id": "20",
+              "name": "RightHand",
               "type": "sprite"
             }
           ]
@@ -72,6 +105,11 @@
         {
           "id": "10",
           "name": "shipBehavior2",
+          "type": "script"
+        },
+        {
+          "id": "22",
+          "name": "BotBehavior",
           "type": "script"
         }
       ]
