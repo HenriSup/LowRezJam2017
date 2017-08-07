@@ -65,13 +65,9 @@ class ShipBehavior extends Sup.Behavior {
       multiplicator=0.707;
     }
     
-    
-    
     this.actor.cannonBody.body.velocity=new CANNON.Vec3((xPad*this.moveSpeed*multiplicator),(yPad*this.moveSpeed*multiplicator),0);
-    Sup.log(Sup.Cannon.setWorldAutoUpdate(true));
     
     this.moveBuffer = new Sup.Math.Vector2(this.actor.cannonBody.body.position.x%1,this.actor.cannonBody.body.position.y%1)
-
 
     this.actor.cannonBody.body.position.x=Math.round(this.actor.cannonBody.body.position.x);
     this.actor.cannonBody.body.position.y=Math.round(this.actor.cannonBody.body.position.y);

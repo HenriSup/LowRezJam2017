@@ -96,8 +96,8 @@
       "children": [],
       "components": [],
       "position": {
-        "x": -20,
-        "y": -25,
+        "x": -100,
+        "y": -100,
         "z": 1
       },
       "orientation": {
@@ -123,8 +123,8 @@
       "children": [],
       "components": [],
       "position": {
-        "x": 20,
-        "y": -25,
+        "x": 100,
+        "y": 100,
         "z": 1
       },
       "orientation": {
