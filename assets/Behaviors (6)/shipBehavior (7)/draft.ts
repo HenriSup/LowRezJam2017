@@ -80,7 +80,21 @@ class ShipBehavior extends Sup.Behavior {
     
     this.moveBuffer = new Sup.Math.Vector2(this.actor.cannonBody.body.position.x%1,this.actor.cannonBody.body.position.y%1)
     
-
+    
+    // Si 
+    if(this.cannonBody.position.x > 32){
+      this.cannonBody.position.x  = 32;
+    }
+    if(this.cannonBody.position.x < -32){
+      this.cannonBody.position.x  = -32;
+    }
+    if(this.cannonBody.position.y > 32){
+      tthis.cannonBody.position.y  = this.cannonBodyBody.position.y+12;
+    }
+    if(this.cannonBodyHands.position.y < this.cannonBodyBody.position.y-3){
+      this.cannonBodyHands.position.y = this.cannonBodyBody.position.y-3;
+    }
+    
     this.actor.cannonBody.body.position.x=Math.round(this.actor.cannonBody.body.position.x);
     this.actor.cannonBody.body.position.y=Math.round(this.actor.cannonBody.body.position.y);
     

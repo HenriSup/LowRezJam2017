@@ -27,6 +27,12 @@
       "line": 0,
       "parentBehavior": null,
       "properties": []
+    },
+    "Basic1Behavior": {
+      "scriptId": "28",
+      "line": 0,
+      "parentBehavior": null,
+      "properties": []
     }
   }
 }

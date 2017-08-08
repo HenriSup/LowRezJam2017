@@ -1,5 +1,5 @@
 {
-  "nextEntryId": 23,
+  "nextEntryId": 29,
   "nodes": [
     {
       "id": "0",
@@ -25,6 +25,18 @@
           "id": "21",
           "name": "Bot",
           "type": "scene"
+        },
+        {
+          "id": "25",
+          "name": "Bullets",
+          "type": null,
+          "children": [
+            {
+              "id": "26",
+              "name": "Basic-1",
+              "type": "scene"
+            }
+          ]
         }
       ]
     },
@@ -33,6 +45,18 @@
       "name": "Sprites",
       "type": null,
       "children": [
+        {
+          "id": "23",
+          "name": "Bullets",
+          "type": null,
+          "children": [
+            {
+              "id": "24",
+              "name": "Basic-1",
+              "type": "sprite"
+            }
+          ]
+        },
         {
           "id": "16",
           "name": "Ship",
@@ -111,6 +135,18 @@
           "id": "22",
           "name": "BotBehavior",
           "type": "script"
+        },
+        {
+          "id": "27",
+          "name": "Bullets",
+          "type": null,
+          "children": [
+            {
+              "id": "28",
+              "name": "Basic-1",
+              "type": "script"
+            }
+          ]
         }
       ]
     }
