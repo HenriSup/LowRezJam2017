@@ -2,6 +2,40 @@
   "formatVersion": 1,
   "nodes": [
     {
+      "id": "8",
+      "name": "GameManager",
+      "children": [],
+      "components": [
+        {
+          "type": "Behavior",
+          "config": {
+            "behaviorName": "GameManagerBehavior",
+            "propertyValues": {}
+          },
+          "id": "0"
+        }
+      ],
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 10
+      },
+      "orientation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "visible": true,
+      "layer": 0,
+      "prefab": null
+    },
+    {
       "id": "0",
       "name": "Camera",
       "children": [],
@@ -96,7 +130,7 @@
       "children": [],
       "components": [],
       "position": {
-        "x": 15,
+        "x": -15,
         "y": -15,
         "z": 2
       },
@@ -123,7 +157,7 @@
       "children": [],
       "components": [],
       "position": {
-        "x": -15,
+        "x": 15,
         "y": -15,
         "z": 2
       },
@@ -142,6 +176,33 @@
       "layer": 0,
       "prefab": {
         "sceneAssetId": "15"
+      }
+    },
+    {
+      "id": "7",
+      "name": "FuzionTokenTayste",
+      "children": [],
+      "components": [],
+      "position": {
+        "x": 0,
+        "y": 20,
+        "z": 2
+      },
+      "orientation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "visible": true,
+      "layer": 0,
+      "prefab": {
+        "sceneAssetId": "32"
       }
     }
   ]

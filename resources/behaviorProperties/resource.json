@@ -11,17 +11,6 @@
         }
       ]
     },
-    "ShipBehavior2": {
-      "scriptId": "10",
-      "line": 0,
-      "parentBehavior": null,
-      "properties": [
-        {
-          "name": "playerNumber",
-          "type": "number"
-        }
-      ]
-    },
     "BotBehavior": {
       "scriptId": "22",
       "line": 0,
@@ -30,6 +19,18 @@
     },
     "Basic1Behavior": {
       "scriptId": "28",
+      "line": 0,
+      "parentBehavior": null,
+      "properties": []
+    },
+    "FusionTokenBehavior": {
+      "scriptId": "34",
+      "line": 0,
+      "parentBehavior": null,
+      "properties": []
+    },
+    "GameManagerBehavior": {
+      "scriptId": "35",
       "line": 0,
       "parentBehavior": null,
       "properties": []

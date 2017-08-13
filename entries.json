@@ -1,5 +1,5 @@
 {
-  "nextEntryId": 29,
+  "nextEntryId": 36,
   "nodes": [
     {
       "id": "0",
@@ -37,6 +37,18 @@
               "type": "scene"
             }
           ]
+        },
+        {
+          "id": "31",
+          "name": "Items",
+          "type": null,
+          "children": [
+            {
+              "id": "32",
+              "name": "FusionToken",
+              "type": "scene"
+            }
+          ]
         }
       ]
     },
@@ -45,18 +57,6 @@
       "name": "Sprites",
       "type": null,
       "children": [
-        {
-          "id": "23",
-          "name": "Bullets",
-          "type": null,
-          "children": [
-            {
-              "id": "24",
-              "name": "Basic-1",
-              "type": "sprite"
-            }
-          ]
-        },
         {
           "id": "16",
           "name": "Ship",
@@ -75,6 +75,18 @@
           ]
         },
         {
+          "id": "23",
+          "name": "Bullets",
+          "type": null,
+          "children": [
+            {
+              "id": "24",
+              "name": "Basic-1",
+              "type": "sprite"
+            }
+          ]
+        },
+        {
           "id": "2",
           "name": "Backgrounds",
           "type": null,
@@ -85,12 +97,6 @@
               "type": "sprite"
             }
           ]
-        },
-        {
-          "id": "5",
-          "name": "PlaceHolders",
-          "type": null,
-          "children": []
         },
         {
           "id": "17",
@@ -113,6 +119,18 @@
               "type": "sprite"
             }
           ]
+        },
+        {
+          "id": "29",
+          "name": "Items",
+          "type": null,
+          "children": [
+            {
+              "id": "30",
+              "name": "FusionToken",
+              "type": "sprite"
+            }
+          ]
         }
       ]
     },
@@ -122,13 +140,13 @@
       "type": null,
       "children": [
         {
-          "id": "7",
-          "name": "shipBehavior",
+          "id": "35",
+          "name": "GameManagerBehavior",
           "type": "script"
         },
         {
-          "id": "10",
-          "name": "shipBehavior2",
+          "id": "7",
+          "name": "shipBehavior",
           "type": "script"
         },
         {
@@ -144,6 +162,18 @@
             {
               "id": "28",
               "name": "Basic-1",
+              "type": "script"
+            }
+          ]
+        },
+        {
+          "id": "33",
+          "name": "Items",
+          "type": null,
+          "children": [
+            {
+              "id": "34",
+              "name": "FusionTokenBehavior",
               "type": "script"
             }
           ]

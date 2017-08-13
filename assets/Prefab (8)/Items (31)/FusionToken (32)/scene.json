@@ -3,15 +3,15 @@
   "nodes": [
     {
       "id": "0",
-      "name": "Ship",
+      "name": "FusionToken",
       "children": [],
       "components": [
         {
           "type": "SpriteRenderer",
           "config": {
             "formatVersion": 1,
-            "spriteAssetId": "14",
-            "animationId": null,
+            "spriteAssetId": "30",
+            "animationId": "0",
             "horizontalFlip": false,
             "verticalFlip": false,
             "castShadow": false,
@@ -22,50 +22,15 @@
             "materialType": "basic",
             "shaderAssetId": null
           },
-          "id": "0"
+          "id": "2"
         },
         {
           "type": "Behavior",
           "config": {
-            "behaviorName": "ShipBehavior",
-            "propertyValues": {
-              "playerNumber": {
-                "type": "number",
-                "value": 1
-              }
-            }
+            "behaviorName": "FusionTokenBehavior",
+            "propertyValues": {}
           },
-          "id": "1"
-        },
-        {
-          "type": "CannonBody",
-          "config": {
-            "formatVersion": 2,
-            "mass": 3,
-            "fixedRotation": true,
-            "group": 1,
-            "mask": 1,
-            "shape": "box",
-            "positionOffset": {
-              "x": 0,
-              "y": 0,
-              "z": 0
-            },
-            "orientationOffset": {
-              "x": 0,
-              "y": 0,
-              "z": 0
-            },
-            "halfSize": {
-              "x": 3,
-              "y": 3,
-              "z": 0.5
-            },
-            "radius": 1,
-            "height": 1,
-            "segments": 16
-          },
-          "id": "3"
+          "id": "4"
         },
         {
           "type": "ArcadeBody2D",
@@ -73,8 +38,8 @@
             "formatVersion": 2,
             "type": "box",
             "movable": false,
-            "width": 8,
-            "height": 8,
+            "width": 10,
+            "height": 10,
             "offset": {
               "x": 0,
               "y": 0
@@ -87,7 +52,7 @@
             "tileSetPropertyName": null,
             "layersIndex": null
           },
-          "id": "4"
+          "id": "5"
         }
       ],
       "position": {

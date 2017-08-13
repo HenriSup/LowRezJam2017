@@ -5,14 +5,15 @@ class ShipBehavior extends Sup.Behavior {
   private controleScheme;
   private maxSpeed=50;
   private moveSpeed=50;
-  private moveBuffer:Sup.Math.Vector2;
   private coolddown = 0.5*60;
   private lastShootFrame = -10 ;
   private frameCounter = 0;
+  private fusionOMeter= 0;
+  private hitBoxShip:Sup.ArcadePhysics2D.Body;
   
   awake() {
     this.cannonBody = this.actor.cannonBody.body;
-    this.moveBuffer = new Sup.Math.Vector2(0,0);
+    this.hitBoxShip = this.actor.arcadeBody2D;
   }
 
   update() {
@@ -78,10 +79,8 @@ class ShipBehavior extends Sup.Behavior {
     
     this.actor.cannonBody.body.velocity=new CANNON.Vec3((xPad*this.moveSpeed*multiplicator),(yPad*this.moveSpeed*multiplicator),0);
     
-    this.moveBuffer = new Sup.Math.Vector2(this.actor.cannonBody.body.position.x%1,this.actor.cannonBody.body.position.y%1)
     
-    
-    // Si 
+    // Border Limits 
     if(this.cannonBody.position.x > 32){
       this.cannonBody.position.x  = 32;
     }
@@ -98,7 +97,8 @@ class ShipBehavior extends Sup.Behavior {
     this.actor.cannonBody.body.position.x=Math.round(this.actor.cannonBody.body.position.x);
     this.actor.cannonBody.body.position.y=Math.round(this.actor.cannonBody.body.position.y);
     
-   
+    this.moveHitBox();
+    
     
     this.incrementFrameCounter();
   }
@@ -133,5 +133,20 @@ class ShipBehavior extends Sup.Behavior {
   incrementFrameCounter(){
     this.frameCounter++;
   }
+  
+  moveHitBox(){
+    this.hitBoxShip.warpPosition(this.actor.getPosition().x,this.actor.getPosition().y);
+  }
+  
+  public getHitBox(){
+    return this.hitBoxShip;
+  }
+  
+  public pickedUpFusionToken(){
+    if (this.fusionOMeter<100) {
+      this.fusionOMeter+=20;
+    }
+  }
+  
 }
 Sup.registerBehavior(ShipBehavior);
