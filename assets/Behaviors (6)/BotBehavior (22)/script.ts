@@ -133,7 +133,25 @@ class BotBehavior extends Sup.Behavior {
     this.cannonBodyHands.position.y=Math.round(this.cannonBodyHands.position.y);
       
     Sup.log(this.cannonBodyHands.position)
- 
+    
+    this.animateBody(xPadDriver,yPadDriver)
+    
+  }
+  
+   private animateBody(x,y){
+    var actualIndex = this.actor.spriteRenderer.getAnimationFrameIndex();
+    if (x<0 && this.actor.spriteRenderer.getAnimation()!="MovingLeft"){
+      this.actor.spriteRenderer.setAnimation("MovingLeft",true);
+      this.actor.spriteRenderer.setAnimationFrameTime(actualIndex);
+    }
+    if (x>0 && this.actor.spriteRenderer.getAnimation()!="MovingRight"){
+      this.actor.spriteRenderer.setAnimation("MovingRight",true);
+      this.actor.spriteRenderer.setAnimationFrameTime(actualIndex);
+    }   
+    if (x==0 && this.actor.spriteRenderer.getAnimation()!="Idle"){
+      this.actor.spriteRenderer.setAnimation("Idle",true);
+      this.actor.spriteRenderer.setAnimationFrameTime(actualIndex);
+    }
   }
 }
 Sup.registerBehavior(BotBehavior);

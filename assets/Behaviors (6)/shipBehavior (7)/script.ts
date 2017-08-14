@@ -158,7 +158,19 @@ class ShipBehavior extends Sup.Behavior {
   }
   
   private animate(x,y){
-    
+    var actualIndex = this.actor.spriteRenderer.getAnimationFrameIndex();
+    if (x<0 && this.actor.spriteRenderer.getAnimation()!="Hit"){
+      this.actor.spriteRenderer.setAnimation("Hit",true);
+      this.actor.spriteRenderer.setAnimationFrameTime(actualIndex);
+    }
+    if (x>0 && this.actor.spriteRenderer.getAnimation()!="Spawning"){
+      this.actor.spriteRenderer.setAnimation("Spawning",true);
+      this.actor.spriteRenderer.setAnimationFrameTime(actualIndex);
+    }   
+    if (x==0 && this.actor.spriteRenderer.getAnimation()!="Moving"){
+      this.actor.spriteRenderer.setAnimation("Moving",true);
+      this.actor.spriteRenderer.setAnimationFrameTime(actualIndex);
+    }
   }
   
 }
