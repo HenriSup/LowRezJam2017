@@ -99,6 +99,8 @@ class ShipBehavior extends Sup.Behavior {
     
     this.moveHitBox();
     
+    this.animate(xPad,yPad);
+    
     
     this.incrementFrameCounter();
   }
@@ -146,6 +148,17 @@ class ShipBehavior extends Sup.Behavior {
     if (this.fusionOMeter<100) {
       this.fusionOMeter+=20;
     }
+  }
+  
+  private instantiateTrail(){
+    var trail = Sup.appendScene("Prefab/ShipTrail")[0];
+    var actorPosition:Sup.Math.Vector3 = this.actor.getPosition();
+    trail.setPosition(new Sup.Math.Vector3(actorPosition.x,actorPosition.y,actorPosition.z-1));
+    trail.getBehavior(ShipTrailBehavior).setShipNumber(this.playerNumber);
+  }
+  
+  private animate(x,y){
+    
   }
   
 }

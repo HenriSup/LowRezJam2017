@@ -82,14 +82,96 @@
     },
     {
       "id": "1",
-      "name": "DebugBackground",
-      "children": [],
+      "name": "Parallax",
+      "children": [
+        {
+          "id": "10",
+          "name": "1",
+          "children": [],
+          "components": [],
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 8
+          },
+          "orientation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "visible": true,
+          "layer": 0,
+          "prefab": {
+            "sceneAssetId": "45"
+          }
+        },
+        {
+          "id": "11",
+          "name": "2",
+          "children": [],
+          "components": [],
+          "position": {
+            "x": 0,
+            "y": -32,
+            "z": 2
+          },
+          "orientation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "visible": true,
+          "layer": 0,
+          "prefab": {
+            "sceneAssetId": "46"
+          }
+        },
+        {
+          "id": "12",
+          "name": "3",
+          "children": [],
+          "components": [],
+          "position": {
+            "x": 0,
+            "y": -64,
+            "z": 1
+          },
+          "orientation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "visible": true,
+          "layer": 0,
+          "prefab": {
+            "sceneAssetId": "47"
+          }
+        }
+      ],
       "components": [
         {
           "type": "SpriteRenderer",
           "config": {
             "formatVersion": 1,
-            "spriteAssetId": "3",
+            "spriteAssetId": "40",
             "animationId": null,
             "horizontalFlip": false,
             "verticalFlip": false,
@@ -107,7 +189,7 @@
       "position": {
         "x": 0,
         "y": 0,
-        "z": 0
+        "z": -5
       },
       "orientation": {
         "x": 0,

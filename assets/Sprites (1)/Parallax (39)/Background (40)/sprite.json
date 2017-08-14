@@ -6,34 +6,19 @@
   "filtering": "pixelated",
   "wrapping": "clampToEdge",
   "pixelsPerUnit": 1,
-  "framesPerSecond": 17,
+  "framesPerSecond": 10,
   "opacity": null,
   "alphaTest": 0.1,
   "frameOrder": "rows",
   "grid": {
-    "width": 10,
-    "height": 10
+    "width": 64,
+    "height": 64
   },
   "origin": {
     "x": 0.5,
     "y": 0.5
   },
-  "animations": [
-    {
-      "id": "0",
-      "name": "Idle",
-      "startFrameIndex": 0,
-      "endFrameIndex": 7,
-      "speed": 1
-    },
-    {
-      "id": "1",
-      "name": "Picked",
-      "startFrameIndex": 8,
-      "endFrameIndex": 15,
-      "speed": 2
-    }
-  ],
+  "animations": [],
   "mapSlots": {
     "map": "map",
     "light": null,

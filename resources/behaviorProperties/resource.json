@@ -34,6 +34,23 @@
       "line": 0,
       "parentBehavior": null,
       "properties": []
+    },
+    "ShipTrailBehavior": {
+      "scriptId": "37",
+      "line": 0,
+      "parentBehavior": null,
+      "properties": []
+    },
+    "ParallaxBehavior": {
+      "scriptId": "48",
+      "line": 0,
+      "parentBehavior": null,
+      "properties": [
+        {
+          "name": "parallaxNumber",
+          "type": "number"
+        }
+      ]
     }
   }
 }

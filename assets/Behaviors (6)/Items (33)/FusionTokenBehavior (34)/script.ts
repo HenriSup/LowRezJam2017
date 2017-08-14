@@ -6,6 +6,7 @@ class FusionTokenBehavior extends Sup.Behavior {
   private gameManager:GameManagerBehavior;
   private ship1:ShipBehavior;
   private ship2:ShipBehavior;
+  private hasBeenPicked=false;
   
   awake() {
     this.hitBoxToken = this.actor.arcadeBody2D;
@@ -15,20 +16,29 @@ class FusionTokenBehavior extends Sup.Behavior {
   }
 
   update() {
-    this.actor.moveX((Math.cos(this.framesAlive/10)));
     var buffer =0
+    
     if (this.framesAlive%5==0){
       buffer=-1;
     }
-    this.actor.moveY(buffer);
+    
+    if (!this.hasBeenPicked){
+      this.actor.moveX((Math.cos(this.framesAlive/10)));
+      this.actor.moveY(buffer);
+    }
+    
+    
     var actualPos = this.actor.getPosition();
     this.actor.setPosition(new Sup.Math.Vector3 (Math.round(actualPos.x),actualPos.y,actualPos.z))
     if (this.framesAlive>this.lifeTime){
       this.actor.destroy();
     }
     this.moveHitBox();
-    this.checkCollision();
+    if (!this.hasBeenPicked){
+      this.checkCollision();
+    }
     this.framesAlive++;
+    this.animate();
   }
   
   moveHitBox(){
@@ -37,12 +47,27 @@ class FusionTokenBehavior extends Sup.Behavior {
   
   checkCollision(){
     //collides with player 1
-    if(Sup.ArcadePhysics2D.intersects(this.hitBoxToken,this.ship1.getHitBox())){
-      Sup.log("ça collide mamene");
+    if (!this.hasBeenPicked){
+      if(Sup.ArcadePhysics2D.intersects(this.hitBoxToken,this.ship1.getHitBox())){
+        this.ship1.pickedUpFusionToken();
+        this.hasBeenPicked=true;
+      } 
+      //collides with player 2
+      if(Sup.ArcadePhysics2D.intersects(this.hitBoxToken,this.ship2.getHitBox())){
+        this.ship2.pickedUpFusionToken();
+        this.hasBeenPicked=true;
+      }  
+    }
+   
+  }
+  animate() {
+    if (this.hasBeenPicked && this.actor.spriteRenderer.getAnimation()!="Picked"){
+      this.actor.spriteRenderer.setAnimation("Picked")
     }
     
-    //collides with player 2
-    Sup.ArcadePhysics2D.intersects(this.hitBoxToken,this.ship2.getHitBox());
+    if (this.actor.spriteRenderer.getAnimation()=="Picked" && (this.actor.spriteRenderer.getAnimationFrameIndex()>=7) ){
+      this.actor.destroy();
+    }
   }
 }
 Sup.registerBehavior(FusionTokenBehavior);

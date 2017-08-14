@@ -12,10 +12,10 @@ class GameManagerBehavior extends Sup.Behavior {
   
   public getShipByNumber(number:number):ShipBehavior{
     var ship:ShipBehavior	;
-    if (number = 0){
+    if (number == 0){
       ship = this.ship1;
     }
-    if (number = 1) {
+    if (number == 1) {
       ship = this.ship2;
     }
     return ship;
