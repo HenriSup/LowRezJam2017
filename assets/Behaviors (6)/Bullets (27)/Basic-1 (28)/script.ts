@@ -1,5 +1,5 @@
 class Basic1Behavior extends Sup.Behavior {
-  
+  public moveSpeed = 3;
   private framesAlive=0;
   private lifeTime=3*60;
   awake() {
@@ -7,7 +7,7 @@ class Basic1Behavior extends Sup.Behavior {
   }
 
   update() {
-    this.actor.moveY(3);
+    this.actor.moveY(this.moveSpeed);
     if (this.framesAlive>this.lifeTime){
       this.actor.destroy();
     }

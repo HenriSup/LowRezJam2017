@@ -149,14 +149,7 @@ class ShipBehavior extends Sup.Behavior {
       this.fusionOMeter+=20;
     }
   }
-  
-  private instantiateTrail(){
-    var trail = Sup.appendScene("Prefab/ShipTrail")[0];
-    var actorPosition:Sup.Math.Vector3 = this.actor.getPosition();
-    trail.setPosition(new Sup.Math.Vector3(actorPosition.x,actorPosition.y,actorPosition.z-1));
-    trail.getBehavior(ShipTrailBehavior).setShipNumber(this.playerNumber);
-  }
-  
+    
   private animate(x,y){
     var actualIndex = this.actor.spriteRenderer.getAnimationFrameIndex();
     if (x<0 && this.actor.spriteRenderer.getAnimation()!="Hit"){
@@ -171,6 +164,10 @@ class ShipBehavior extends Sup.Behavior {
       this.actor.spriteRenderer.setAnimation("Moving",true);
       this.actor.spriteRenderer.setAnimationFrameTime(actualIndex);
     }
+  }
+  
+  public hit(damages:number){
+    
   }
   
 }

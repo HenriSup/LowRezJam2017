@@ -21,7 +21,12 @@
       "scriptId": "28",
       "line": 0,
       "parentBehavior": null,
-      "properties": []
+      "properties": [
+        {
+          "name": "moveSpeed",
+          "type": "number"
+        }
+      ]
     },
     "FusionTokenBehavior": {
       "scriptId": "34",
@@ -31,12 +36,6 @@
     },
     "GameManagerBehavior": {
       "scriptId": "35",
-      "line": 0,
-      "parentBehavior": null,
-      "properties": []
-    },
-    "ShipTrailBehavior": {
-      "scriptId": "37",
       "line": 0,
       "parentBehavior": null,
       "properties": []
@@ -51,6 +50,12 @@
           "type": "number"
         }
       ]
+    },
+    "NanoBehavior": {
+      "scriptId": "56",
+      "line": 0,
+      "parentBehavior": null,
+      "properties": []
     }
   }
 }

@@ -1,5 +1,5 @@
 {
-  "nextEntryId": 56,
+  "nextEntryId": 59,
   "nodes": [
     {
       "id": "0",
@@ -39,6 +39,11 @@
             {
               "id": "26",
               "name": "Basic-1",
+              "type": "scene"
+            },
+            {
+              "id": "58",
+              "name": "Enemies-1",
               "type": "scene"
             }
           ]
@@ -243,9 +248,21 @@
           "type": "script"
         },
         {
-          "id": "37",
-          "name": "ShipTrail",
+          "id": "48",
+          "name": "ParallaxBehavior",
           "type": "script"
+        },
+        {
+          "id": "57",
+          "name": "Enemies",
+          "type": null,
+          "children": [
+            {
+              "id": "56",
+              "name": "NanoBehavior",
+              "type": "script"
+            }
+          ]
         },
         {
           "id": "27",
@@ -270,11 +287,6 @@
               "type": "script"
             }
           ]
-        },
-        {
-          "id": "48",
-          "name": "ParallaxBehavior",
-          "type": "script"
         }
       ]
     }
