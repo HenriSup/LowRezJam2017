@@ -1,5 +1,5 @@
 {
-  "nextEntryId": 55,
+  "nextEntryId": 56,
   "nodes": [
     {
       "id": "0",
@@ -81,7 +81,13 @@
           "id": "54",
           "name": "Enemies",
           "type": null,
-          "children": []
+          "children": [
+            {
+              "id": "55",
+              "name": "Nano",
+              "type": "scene"
+            }
+          ]
         }
       ]
     },
