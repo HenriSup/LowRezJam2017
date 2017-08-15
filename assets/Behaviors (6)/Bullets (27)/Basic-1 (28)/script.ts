@@ -7,7 +7,7 @@ class Basic1Behavior extends Sup.Behavior {
   }
 
   update() {
-    this.actor.moveY(2);
+    this.actor.moveY(3);
     if (this.framesAlive>this.lifeTime){
       this.actor.destroy();
     }

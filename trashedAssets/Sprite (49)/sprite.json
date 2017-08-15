@@ -6,13 +6,13 @@
   "filtering": "pixelated",
   "wrapping": "clampToEdge",
   "pixelsPerUnit": 1,
-  "framesPerSecond": 17,
+  "framesPerSecond": 10,
   "opacity": null,
   "alphaTest": 0.1,
   "frameOrder": "rows",
   "grid": {
-    "width": 10,
-    "height": 20
+    "width": 100,
+    "height": 100
   },
   "origin": {
     "x": 0.5,

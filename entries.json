@@ -1,5 +1,5 @@
 {
-  "nextEntryId": 49,
+  "nextEntryId": 55,
   "nodes": [
     {
       "id": "0",
@@ -76,6 +76,12 @@
               "type": "scene"
             }
           ]
+        },
+        {
+          "id": "54",
+          "name": "Enemies",
+          "type": null,
+          "children": []
         }
       ]
     },
@@ -109,6 +115,11 @@
             {
               "id": "24",
               "name": "Basic-1",
+              "type": "sprite"
+            },
+            {
+              "id": "50",
+              "name": "Enemie-1",
               "type": "sprite"
             }
           ]
@@ -182,6 +193,23 @@
             {
               "id": "30",
               "name": "FusionToken",
+              "type": "sprite"
+            }
+          ]
+        },
+        {
+          "id": "51",
+          "name": "Enemies",
+          "type": null,
+          "children": [
+            {
+              "id": "52",
+              "name": "Nano",
+              "type": "sprite"
+            },
+            {
+              "id": "53",
+              "name": "Micro",
               "type": "sprite"
             }
           ]

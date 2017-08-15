@@ -19,7 +19,7 @@
                   "config": {
                     "formatVersion": 1,
                     "spriteAssetId": "19",
-                    "animationId": null,
+                    "animationId": "",
                     "horizontalFlip": false,
                     "verticalFlip": false,
                     "castShadow": false,

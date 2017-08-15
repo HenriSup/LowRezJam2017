@@ -6,19 +6,34 @@
   "filtering": "pixelated",
   "wrapping": "clampToEdge",
   "pixelsPerUnit": 1,
-  "framesPerSecond": 17,
+  "framesPerSecond": 13,
   "opacity": null,
   "alphaTest": 0.1,
   "frameOrder": "rows",
   "grid": {
-    "width": 10,
-    "height": 20
+    "width": 8,
+    "height": 8
   },
   "origin": {
     "x": 0.5,
     "y": 0.5
   },
-  "animations": [],
+  "animations": [
+    {
+      "id": "0",
+      "name": "Idle",
+      "startFrameIndex": 0,
+      "endFrameIndex": 0,
+      "speed": 1
+    },
+    {
+      "id": "1",
+      "name": "Shoot",
+      "startFrameIndex": 1,
+      "endFrameIndex": 3,
+      "speed": 1
+    }
+  ],
   "mapSlots": {
     "map": "map",
     "light": null,
