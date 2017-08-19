@@ -12,6 +12,22 @@ class Basic1Behavior extends Sup.Behavior {
       this.actor.destroy();
     }
     this.framesAlive++;
+    if (this.isOffScreen){
+      this.destruct();
+    }
+  }
+  
+  isOffScreen():boolean{
+    var isOffScreen = false;
+    var position = this.actor.getPosition();
+    if (position.x > 32 || position.x<-32 || position.y > 32 || position.y < -32){
+      isOffScreen = true;
+    } 
+    return isOffScreen;
+  }
+  
+  destruct(){
+    
   }
 }
 Sup.registerBehavior(Basic1Behavior);
