@@ -46,7 +46,7 @@ class NanoBehavior extends Sup.Behavior {
       bufferY=-1;
     }
     
-    if (this.framesAlive%30==0){
+    if (this.framesAlive%30==0 && this.i){
       this.shoot();
     }
 

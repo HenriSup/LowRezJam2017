@@ -3,14 +3,14 @@
   "nodes": [
     {
       "id": "0",
-      "name": "Acteur",
+      "name": "Explosion",
       "children": [],
       "components": [
         {
           "type": "SpriteRenderer",
           "config": {
             "formatVersion": 1,
-            "spriteAssetId": "52",
+            "spriteAssetId": "60",
             "animationId": "0",
             "horizontalFlip": false,
             "verticalFlip": false,
@@ -25,39 +25,12 @@
           "id": "0"
         },
         {
-          "type": "ArcadeBody2D",
-          "config": {
-            "formatVersion": 2,
-            "type": "box",
-            "movable": false,
-            "width": 4,
-            "height": 4,
-            "offset": {
-              "x": 0,
-              "y": 1
-            },
-            "bounce": {
-              "x": 0,
-              "y": 0
-            },
-            "tileMapAssetId": null,
-            "tileSetPropertyName": null,
-            "layersIndex": null
-          },
-          "id": "1"
-        },
-        {
           "type": "Behavior",
           "config": {
-            "behaviorName": "NanoBehavior",
-            "propertyValues": {
-              "life": {
-                "type": "number",
-                "value": 0
-              }
-            }
+            "behaviorName": "ExplosionBehavior",
+            "propertyValues": {}
           },
-          "id": "2"
+          "id": "1"
         }
       ],
       "position": {

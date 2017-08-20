@@ -55,6 +55,41 @@
       "scriptId": "56",
       "line": 0,
       "parentBehavior": null,
+      "properties": [
+        {
+          "name": "horizontalMaxMovement",
+          "type": "number"
+        },
+        {
+          "name": "life",
+          "type": "number"
+        },
+        {
+          "name": "shotDamages",
+          "type": "number"
+        },
+        {
+          "name": "damagesDoneWhenCollide",
+          "type": "number"
+        },
+        {
+          "name": "damagesTakenWhenCollide",
+          "type": "number"
+        },
+        {
+          "name": "invulerabilityFrame",
+          "type": "number"
+        },
+        {
+          "name": "framesBeforeVerticalMovement",
+          "type": "number"
+        }
+      ]
+    },
+    "ExplosionBehavior": {
+      "scriptId": "64",
+      "line": 0,
+      "parentBehavior": null,
       "properties": []
     }
   }
