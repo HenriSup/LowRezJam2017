@@ -46,7 +46,7 @@ class NanoBehavior extends Sup.Behavior {
       bufferY=-1;
     }
     
-    if (this.framesAlive%30==0){
+    if (this.framesAlive%30==0 && !this.shouldDie){
       this.shoot();
     }
 
@@ -150,7 +150,7 @@ class NanoBehavior extends Sup.Behavior {
       var actorPosX = this.actor.getPosition().x;
       var actorPosY = this.actor.getPosition().y;
       var actorPosZ = this.actor.getPosition().z;
-      var width = 3;
+      var width = 2;
       var lowerX = actorPosX-width;
       var higherX = actorPosX+width;
       var lowerY = actorPosY-width;
@@ -159,8 +159,11 @@ class NanoBehavior extends Sup.Behavior {
       
       var posX = (Math.random() * (higherX-lowerX)) + lowerX;
       var posY = (Math.random() * (higherY-lowerY)) + lowerY;
-
-      var explosion = Sup.appendScene("Prefab/Fx/Explosion")[0];
+      
+      posX = Math.round(posX);
+      posY = Math.round(posY);
+      
+      var explosion = Sup.appendScene("Prefab/Fx/Explosion1")[0];
       explosion.setPosition(posX,posY,actorPosZ+1)
     }
   }

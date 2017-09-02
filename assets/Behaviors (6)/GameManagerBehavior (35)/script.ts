@@ -1,13 +1,14 @@
 class GameManagerBehavior extends Sup.Behavior {
   ship1:ShipBehavior;
   ship2:ShipBehavior;
+  
   awake() {
     this.ship1=Sup.getActor("Player1").getBehavior(ShipBehavior);
     this.ship2=Sup.getActor("Player2").getBehavior(ShipBehavior);
   }
 
   update() {
-    
+  
   }
   
   public getShipByNumber(number:number):ShipBehavior{
@@ -20,5 +21,6 @@ class GameManagerBehavior extends Sup.Behavior {
     }
     return ship;
   }
+  
 }
 Sup.registerBehavior(GameManagerBehavior);

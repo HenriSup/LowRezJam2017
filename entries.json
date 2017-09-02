@@ -1,5 +1,5 @@
 {
-  "nextEntryId": 65,
+  "nextEntryId": 67,
   "nodes": [
     {
       "id": "0",
@@ -101,7 +101,12 @@
           "children": [
             {
               "id": "62",
-              "name": "Explosion",
+              "name": "Explosion1",
+              "type": "scene"
+            },
+            {
+              "id": "66",
+              "name": "Explosion2",
               "type": "scene"
             }
           ]
@@ -244,7 +249,12 @@
           "children": [
             {
               "id": "60",
-              "name": "Explosion",
+              "name": "Explosion2",
+              "type": "sprite"
+            },
+            {
+              "id": "65",
+              "name": "Explosion1",
               "type": "sprite"
             }
           ]
